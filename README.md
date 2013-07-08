@@ -1,0 +1,4 @@
+blogomalist
+===========
+
+Theme for Blogotext

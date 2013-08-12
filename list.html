@@ -27,29 +27,42 @@
 	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
 </head>
 <body>
-	<header id="top">
-		<div><a id="top-link" href="#top" title="Haut de page"></a></div>
-		<div id="top_text">
-			<h1><a href="{racine_du_site}" title="{blog_nom}">{blog_nom}</a></h1>
-			<h2>{blog_description}</h2>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="index.php" title="Accueil">Accueil</a></li>
-				<li><a href="index.php" title="Blog">Blog</a></li>
-				<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
-				<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
-				<li><a href="?random" title="Article au hasard ?">Article au hasard ?</a></li>
-			</ul>
-		</nav>
-	</header>
 	<div id="wrapper">
-		<section id="sidebar">
-			<nav id="navigate">
+		<header id="top">
+			<div><a id="top-link" href="#top" title="Haut de page"></a></div>
+			<div id="top_text">
+				<h1><a href="{racine_du_site}" title="{blog_nom}">{blog_nom}</a></h1>
+				<h2>{blog_description}</h2>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.php" title="Accueil">Accueil</a></li>
+					<li><a href="index.php" title="Blog">Blog</a></li>
+					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+					<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+					<li><a href="?random" title="Article au hasard ?">Article au hasard ?</a></li>
+				</ul>
+			</nav>
+		</header>
+		<br style="clear:both;" />
+		<section id="contenu">
+			{BOUCLE_posts}
+				// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
+				// les thèmes pour ces choses sont dans le dossier "template"
+				// chaque "objet" (lien, article, …) dispose de son propre formatage. 
+				// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
+			{/BOUCLE_posts}
+		</section>
+		<aside id="sidebar">
+			<nav id="recherche">
 				<h3><i class="icon-search"></i>  Rechercher</h3>
 				{recherche}
+				<hr />
+			</nav>
+				<nav id="navigate">
+				<h3><i class="icon-calendar"></i>  Calendrier</h3>
 				{calendrier}
-				<hr/>
+			<hr />
 			</nav>
 			<nav id="last_comments">
 				<h3><i class="icon-comments"></i>  Derniers commentaires</h3>
@@ -61,8 +74,8 @@
 				{categories_encart}
 				<hr/>
 			</nav>
-			<!--nav id="liens">
-				<h3>Autres</h3>
+			<nav id="liens">
+				<h3><i class="icon-hand-right"></i>  Autres</h3>
 				<ul>
 					<li><a href="index.php" title="Blog">Blog</a></li>
 					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
@@ -71,12 +84,12 @@
 				<hr/>
 			</nav>
 			<nav id="random">
-				<h3>Un article au hasard</h3>
+				<h3><i class="icon-refresh"></i>  Un article au hasard</h3>
 					<ul>
 						<li><a href="?random" title="Un article au hasard ?">Un article au hasard ?</a></li>
 					</ul>
 				<hr/>
-			</nav-->
+			</nav>
 			<nav id="rss">
 				<h3><i class="icon-rss"></i>  Fils RSS</h3>
 				<ul>
@@ -85,15 +98,7 @@
 				</ul>
 				<hr/>
 			</nav>
-		</section>
-		<section id="contenu">
-			{BOUCLE_posts}
-				// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
-				// les thèmes pour ces choses sont dans le dossier "template"
-				// chaque "objet" (lien, article, …) dispose de son propre formatage. 
-				// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
-			{/BOUCLE_posts}
-		</section>
+		</aside>
 		<br style="clear:both;" />
 		{pagination}
 	</div> <!-- einde #wrapper -->

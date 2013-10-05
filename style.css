@@ -21,8 +21,6 @@ html, body {
 	color: #575757;
 	margin: 0 0 1px; height: 100%; 
 	line-height: 1.7;
-	
-
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
 }
@@ -206,13 +204,8 @@ label span, legend span {
 /* LAYOUT */
 header,section,aside {margin-bottom: 1em;}
 section#contenu {display: inline;float: left;width: 72.91666666666666%;margin-left: 1.0416666666666665%;margin-right: 1.0416666666666665%;}
-/*section#error {width:100%; margin-top: 2em;}*/
 aside#sidebar {display: inline;float: left;width: 22.916666666666664%;margin-left: 1.0416666666666665%;margin-right: 1.0416666666666665%;}
-
 #wrapper {max-width: 1100px;margin: 0 auto;clear: both;}
-/*#top {height: 90px;margin-bottom: 10px;padding: 15px;border-bottom: 1px solid #A3A3A3;}*/
-/*#contenu {margin-right: 280px;}*/
-/*#sidebar {float: right;	width: 240px;padding: 10px;}*/
 footer {
 	position: relative;
 	height: 40px;
@@ -465,5 +458,4 @@ a#top-link {background: url(images/up.png) no-repeat 0 0; height:48px; width:48p
 	section#contenu, aside#sidebar {display: inline;float: left;width: 97.91666666666666%;margin-left: 1.0416666666666665%;margin-right: 1.0416666666666665%;}
 	footer {font-size: .8em;}
 	#top nav {display:none;}
-	
 }

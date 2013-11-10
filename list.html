@@ -44,62 +44,64 @@
 			</nav>
 		</header>
 		<br style="clear:both;" />
-		<section id="contenu">
-			{BOUCLE_posts}
-				// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
-				// les thèmes pour ces choses sont dans le dossier "template"
-				// chaque "objet" (lien, article, …) dispose de son propre formatage. 
-				// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
-			{/BOUCLE_posts}
-		</section>
-		<aside id="sidebar">
-			<nav id="recherche">
-				<h3><i class="fa fa-search"></i>  Rechercher</h3>
-				{recherche}
+		<main>
+			<section id="contenu">
+				{BOUCLE_posts}
+					// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
+					// les thèmes pour ces choses sont dans le dossier "template"
+					// chaque "objet" (lien, article, …) dispose de son propre formatage. 
+					// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
+				{/BOUCLE_posts}
+			</section>
+			<aside id="sidebar">
+				<nav id="recherche">
+					<h3><i class="fa fa-search"></i>  Rechercher</h3>
+					{recherche}
+					<hr />
+				</nav>
+					<nav id="navigate">
+					<h3><i class="fa fa-calendar"></i>  Calendrier</h3>
+					{calendrier}
 				<hr />
-			</nav>
-				<nav id="navigate">
-				<h3><i class="fa fa-calendar"></i>  Calendrier</h3>
-				{calendrier}
-			<hr />
-			</nav>
-			<nav id="last_comments">
-				<h3><i class="fa fa-comments"></i>  Derniers commentaires</h3>
-				{commentaires_encart}
-				<hr/>
-			</nav>
-			<nav id="tags">
-				<h3><i class="fa fa-tag"></i>  Tags</h3>
-				{categories_encart}
-				<hr/>
-			</nav>
-			<nav id="liens">
-				<h3><i class="fa fa-hand-o-right"></i>  Autres</h3>
-				<ul>
-					<li><a href="index.php" title="Blog">Blog</a></li>
-					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
-					<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
-				</ul>
-				<hr/>
-			</nav>
-			<nav id="random">
-				<h3><i class="fa fa-random"></i>  Un article au hasard</h3>
+				</nav>
+				<nav id="last_comments">
+					<h3><i class="fa fa-comments"></i>  Derniers commentaires</h3>
+					{commentaires_encart}
+					<hr/>
+				</nav>
+				<nav id="tags">
+					<h3><i class="fa fa-tag"></i>  Tags</h3>
+					{categories_encart}
+					<hr/>
+				</nav>
+				<nav id="liens">
+					<h3><i class="fa fa-hand-o-right"></i>  Autres</h3>
 					<ul>
-						<li><a href="?random" title="Un article au hasard ?">Un article au hasard ?</a></li>
+						<li><a href="index.php" title="Blog">Blog</a></li>
+						<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+						<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
 					</ul>
-				<hr/>
-			</nav>
-			<nav id="rss">
-				<h3><i class="fa fa-rss"></i>  Fils RSS</h3>
-				<ul>
-					<li><a href="rss.php" title="RSS Blog"><i class="fa fa-rss"></i>  Blog</a></li>
-					<li><a href="rss.php?full" title="RSS Blog (articles complets)"><i class="fa fa-rss"></i>  Blog (articles complets)</a></li>
-				</ul>
-				<hr/>
-			</nav>
-		</aside>
-		<br style="clear:both;" />
-		{pagination}
+					<hr/>
+				</nav>
+				<nav id="random">
+					<h3><i class="fa fa-random"></i>  Un article au hasard</h3>
+						<ul>
+							<li><a href="?random" title="Un article au hasard ?">Un article au hasard ?</a></li>
+						</ul>
+					<hr/>
+				</nav>
+				<nav id="rss">
+					<h3><i class="fa fa-rss"></i>  Fils RSS</h3>
+					<ul>
+						<li><a href="rss.php" title="RSS Blog"><i class="fa fa-rss"></i>  Blog</a></li>
+						<li><a href="rss.php?full" title="RSS Blog (articles complets)"><i class="fa fa-rss"></i>  Blog (articles complets)</a></li>
+					</ul>
+					<hr/>
+				</nav>
+			</aside>
+			<br style="clear:both;" />
+			{pagination}
+		</main>
 	</div> <!-- einde #wrapper -->
 	<footer><b>{blog_auteur}</b>, tout droits réservés – Publié avec  <a href="http://lehollandaisvolant.net/blogotext/" title=" Site officiel de BlogoText" rel="external"><i class="fa fa-external-link"></i> BlogoText</a> – Thème par  <a href="http://www.xoofoo.org" title="Site internet de Kris" rel="external"><i class="fa fa-external-link"></i> Kris</a></footer>
   <!-- javascript at the bottom for fast page loading -->

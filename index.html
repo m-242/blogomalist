@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>{blog_nom}</title>
+	<meta name="generator" content="BlogoText" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="{blog_auteur}" />
+	<meta name="description" content="{blog_description}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="keywords" content="{keywords}" />
+	<link rel="icon" type="image/png" href="{style}/images/favicon.png" />
+	<link rel="apple-touch-icon" href="{style}/images/apple-touch-icon.png">
+	<link rel="canonical" href="{racine_du_site}" />
+	<link rel="image_src" href="{style}/images/apple-touch-icon.png" />
+	<meta itemprop="name" content="{article_titre}" />
+	<meta itemprop="description" content="{article_chapo}" />
+	<meta itemprop="image" content="{style}/images/apple-touch-icon.png">
+	<meta property="og:title" content="{blog_nom}" />
+	<meta property="og:url" content="{racine_du_site}" />
+	<meta property="og:description" content="{blog_description}" />
+	<meta property="og:site_name" content="{blog_nom}" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:image" content="{style}/images/apple-touch-icon.png" />
+	<link type="text/css" rel="stylesheet" href="{style}/style.css" />
+	<link type="application/rss+xml" rel="alternate" title="RSS - Articles" href="{rss}" />
+	<link rel="alternate" type="application/rss+xml" title="RSS - Les liens" href="rss.php?mode=links" />
+	<link rel="alternate" type="application/atom+xml" title="ATOM - Le blog" href="atom.php" />
+	<link rel="alternate" type="application/atom+xml" title="ATOM - Les liens" href="atom.php?mode=links" />
+</head>
+<body>
+	<div id="wrapper">
+		<header id="top">
+			<div><a id="top-link" href="#top" title="Haut de page"></a></div>
+			<div id="top_text">
+				<h1><a href="{racine_du_site}" title="{blog_nom}">{blog_nom}</a></h1>
+				<h2>{blog_description}</h2>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.php" title="Accueil">Accueil</a></li>
+					<li><a href="index.php" title="Blog">Blog</a></li>
+					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+					<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+					<li><a href="?random" title="Article au hasard ?">Article au hasard ?</a></li>
+				</ul>
+			</nav>
+		</header>
+		<br style="clear:both;" />
+		<main>
+			<section id="contenu">
+				LE CONTENU LOL
+			</section>
+			<aside id="sidebar">
+				<nav id="recherche">
+					<h3><i class="fa fa-search"></i>  Rechercher</h3>
+					{recherche}
+					<hr />
+				<nav id="last_comments">
+					<h3><i class="fa fa-comments"></i>  Derniers commentaires</h3>
+					{commentaires_encart}
+					<hr/>
+				</nav>
+				<nav id="tags">
+					<h3><i class="fa fa-tag"></i>  Tags</h3>
+					{categories_encart}
+					<hr/>
+				</nav>
+				<nav id="liens">
+					<h3><i class="fa fa-hand-o-right"></i>  Autres</h3>
+					<ul>
+						<li><a href="index.php" title="Blog">Blog</a></li>
+						<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+						<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+					</ul>
+					<hr/>
+				</nav>
+				<nav id="random">
+					<h3><i class="fa fa-random"></i>  Un article au hasard</h3>
+						<ul>
+							<li><a href="?random" title="Un article au hasard ?">Un article au hasard ?</a></li>
+						</ul>
+					<hr/>
+				</nav>
+				<nav id="rss">
+					<h3><i class="fa fa-rss"></i>  Fils RSS</h3>
+					<ul>
+						<li><a href="rss.php" title="RSS Blog"><i class="fa fa-rss"></i>  Blog</a></li>
+						<li><a href="rss.php?full" title="RSS Blog (articles complets)"><i class="fa fa-rss"></i>  Blog (articles complets)</a></li>
+					</ul>
+					<hr/>
+				</nav>
+			</aside>
+			<br style="clear:both;" />
+			{pagination}
+		</main>
+	</div> <!-- einde #wrapper -->
+	<footer><b>{blog_auteur}</b>, tout droits réservés – Publié avec  <a href="http://lehollandaisvolant.net/blogotext/" title=" Site officiel de BlogoText" rel="external"><i class="fa fa-external-link"></i> BlogoText</a> – Thème par  <a href="http://www.xoofoo.org" title="Site internet de Kris" rel="external"><i class="fa fa-external-link"></i> Kris</a></footer>
+</body>
+</html>
